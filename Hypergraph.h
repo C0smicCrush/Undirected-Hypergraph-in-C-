@@ -10,6 +10,8 @@ class Hypergraph{
 		vector<vector<int>> edgeLists;
 		vector<int> adjVertices;
 		vector<int> adjEdges;
+		int edges;
+		int vertices;
 	public:
 		bool addEdge(int);
 		bool addVertex(int);
