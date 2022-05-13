@@ -7,10 +7,13 @@
 
 class Hypergraph{
 	private:
-	vector<vector<int>> edgeLists;
-	vector<int> adjVertices;
-	vector<string> adjEdges;
+		vector<vector<int>> edgeLists;
+		vector<int> adjVertices;
+		vector<int> adjEdges;
 	public:
+		bool addEdge(string);
+		bool addVertex(int);
+		bool addVertextoEdge(int, int);
 		
 }
 
