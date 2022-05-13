@@ -4,6 +4,7 @@
 #include <vector>
 #include <queue>
 #include <string>
+using std::vector;
 
 class Hypergraph{
 	private:
@@ -15,11 +16,12 @@ class Hypergraph{
 		int edges;
 		int vertices;
 	public:
+		Hypergraph();
 		bool addEdge(int);
 		bool addVertex(int);
 		bool addVertextoEdge(int, int);
 		
-}
+};
 
 #endif
 
