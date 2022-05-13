@@ -11,7 +11,7 @@ class Hypergraph{
 		vector<int> adjVertices;
 		vector<int> adjEdges;
 	public:
-		bool addEdge(string);
+		bool addEdge(int);
 		bool addVertex(int);
 		bool addVertextoEdge(int, int);
 		
