@@ -21,7 +21,7 @@ class Hypergraph{
 		bool addEdge(int);
 		bool addVertex(int);
 		bool addVertextoEdge(int, int);
-		
+		void printEdge(int);
 };
 
 #endif
