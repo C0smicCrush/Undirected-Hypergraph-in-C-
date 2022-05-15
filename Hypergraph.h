@@ -4,6 +4,7 @@
 #include <vector>
 #include <queue>
 #include <string>
+#include <algorithm>
 using std::vector;
 
 class Hypergraph{
