@@ -8,11 +8,29 @@ Hypergraph::Hypergraph(){
 bool Hypergraph::addEdge(int intIn){
 	bool added = 0;
 
-	 if((umap.find(intIn) == umap.end())){
+	 if((edgeList.find(intIn) == edgeList.end())){
 		vector<int> myVector; 
-	 	umap[intIn] = myVector;
+	 	edgeList[intIn] = myVector;
 		added =1;
 	 }
+	return added;
+}
+bool Hypergraph::addVertex(int intIn){
+	bool added =0;
+	if((find(adjVertices.begin(), adjVertices.end(), intIn)) == adjVertices.end()){
+		added = 1; 
+		adjVertices.push_back(intIn);
+	}
+	return added;
+}
+bool Hypergraph::addVertextoEdge(int vert, int edg){
+	bool added = 0;
+	if((edgeList.find(edg) != edgeList.end())){
+		if(!((find(adjVertices.begin(), adjVertices.end(), vert)) == adjVertices.end())){
+			added = 1;
+			edgeList[edg].push_back(vert);
+		}
+	}
 	return added;
 }
 

@@ -13,7 +13,7 @@ class Hypergraph{
 	private:
 		int getInputLocation(int,int);
 //		vector<vector<int>> edgeLists;
-		unordered_map <int,  vector<int>> umap;
+		unordered_map <int,  vector<int>> edgeList;
 		vector<int> adjVertices;
 		int binarySearch(int, int);
 		int edges;
