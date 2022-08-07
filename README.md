@@ -8,9 +8,15 @@ through vectors, and the number of vertices can be represented as n.
 **Please note that removal methods have the same complexity as their addition counterparts**
 
 The Big-O notation for operations:
-Add Edge: O(k)
-Add Vertex: O(n)
-Add Vertex to Edge: O(k+n)
+```diff
+-Add Edge: O(k)
 
-Access Vertex: O(n)
-Access Edge: O(1)C
++Add Vertex: O(n)
+
+-Add Vertex to Edge: O(k+n)
+
++Access Vertex: O(n)
+
+-Access Edge: O(1)
+
+```
