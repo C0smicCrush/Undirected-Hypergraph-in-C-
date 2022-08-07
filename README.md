@@ -5,10 +5,12 @@ I have designed this implementation to have a focus on accessing edges, hence th
 The implementation for storing the keys is using an unordered map to hold the edges, which can be represented as k. The implementation for storing the vertices is 
 through vectors, and the number of vertices can be represented as n.
 
+**Please note that removal methods have the same complexity as their addition counterparts**
+
 The Big-O notation for operations:
 Add Edge: O(k)
 Add Vertex: O(n)
 Add Vertex to Edge: O(k+n)
-**Please note that removal methods have the same complexity as their addition counterparts**
+
 Access Vertex: O(n)
 Access Edge: O(1)C
