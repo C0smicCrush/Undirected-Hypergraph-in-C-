@@ -5,17 +5,20 @@
 #include <queue>
 #include <string>
 #include <algorithm>
+#include <unordered_map>
 using std::vector;
+using std::unordered_map;
 
 class Hypergraph{
 	private:
 		int getInputLocation(int,int);
-		vector<vector<int>> edgeLists;
+//		vector<vector<int>> edgeLists;
+		unordered_map <int,  vector<int>> umap;
 		vector<int> adjVertices;
-		vector<int> adjEdges;
 		int binarySearch(int, int);
 		int edges;
 		int vertices;
+		void testfunc();
 	public:
 		Hypergraph();
 		bool addEdge(int);
