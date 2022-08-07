@@ -27,13 +27,27 @@ bool Hypergraph::addVertextoEdge(int vert, int edg){
 	bool added = 0;
 	if((edgeList.find(edg) != edgeList.end())){
 		if(!((find(adjVertices.begin(), adjVertices.end(), vert)) == adjVertices.end())){
+			auto test = find(edgeList[edg].begin(), edgeList[edg].end(), vert);
+			if(test == edgeList[edg].end()){
 			added = 1;
 			edgeList[edg].push_back(vert);
+			}
 		}
 	}
 	return added;
 }
+void Hypergraph::printEdge(int intIn){
+	if((edgeList.find(intIn) == edgeList.end())){
+		std::cout << "Invalid Index!";
+	}
+	else{
+		for(int a =0; a < edgeList[intIn].size(); a++){
+			std::cout << edgeList[intIn][a] << " ";
+		}
+	}
 
+	std::cout << std::endl;
+}
 
 
 

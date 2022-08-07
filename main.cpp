@@ -9,5 +9,6 @@ int main(){
 
 	std::cout << hyper.addVertextoEdge(1,1);
 	std::cout << hyper.addVertextoEdge(1,1);
+
 	return 0;
 }
