@@ -83,3 +83,17 @@ bool Hypergraph::removeVertex(int intIn){
 	}
 	return outret;
 }
+bool Hypergraph::removeVertexfromEdge(int vert, int edg){
+	bool outret =0;
+	if((edgeList.find(edg) != edgeList.end())){
+		int size = edgeList[edg].size();
+		for(int a =0; a < size; a++){
+			if(edgeList[edg][a] == vert){
+				outret = 1;
+				edgeList[edg].erase(edgeList[edg].begin() + a);
+				break;
+			}
+		}
+	}
+	return outret;
+}
