@@ -95,5 +95,7 @@ bool Hypergraph::removeVertexfromEdge(int vert, int edg){
 			}
 		}
 	}
+
+
 	return outret;
 }

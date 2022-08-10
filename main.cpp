@@ -12,5 +12,9 @@ int main(){
 	std::cout << hyper.removeEdge(2);
 	std::cout << hyper.removeVertexfromEdge(1,1);	
 	std::cout << hyper.removeVertexfromEdge(1,2);
+	for(int a =0 ;a < 10;a++){
+		hyper.addVertex(a);
+		hyper.addEdge(a);
+	}
 	return 0;
 }
