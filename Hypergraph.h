@@ -29,6 +29,10 @@ class Hypergraph{
 		bool removeEdge(int);
 		bool removeVertex(int);
 		bool removeVertexfromEdge(int, int);
+		int returnEdges();
+		int returnVertices();
+		
+
 		
 
 };

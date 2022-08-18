@@ -7,22 +7,26 @@ Hypergraph::Hypergraph(){
 
 bool Hypergraph::addEdge(int intIn){
 	bool added = 0;
+	if(intIn > 0 ){
+		if((edgeList.find(intIn) == edgeList.end())){
+			vector<int> myVector; 
+			edgeList[intIn] = myVector;
+			added =1;
+			edges = edges + 1;
+		}
+	}
 
-	 if((edgeList.find(intIn) == edgeList.end())){
-		vector<int> myVector; 
-	 	edgeList[intIn] = myVector;
-		added =1;
-	 }
-	 edges++;
 	return added;
 }
 bool Hypergraph::addVertex(int intIn){
 	bool added =0;
-	if((find(adjVertices.begin(), adjVertices.end(), intIn)) == adjVertices.end()){
-		added = 1; 
-		adjVertices.push_back(intIn);
+	if(intIn > 0 ){
+		if((find(adjVertices.begin(), adjVertices.end(), intIn)) == adjVertices.end()){
+			added = 1; 
+			adjVertices.push_back(intIn);
+			vertices++;
+		}
 	}
-	vertices++;
 	return added;
 }
 bool Hypergraph::addVertextoEdge(int vert, int edg){
@@ -98,4 +102,13 @@ bool Hypergraph::removeVertexfromEdge(int vert, int edg){
 
 
 	return outret;
+}
+
+
+int Hypergraph::returnEdges(){
+	return edges;
+}
+
+int Hypergraph::returnVertices(){
+	return vertices;
 }
