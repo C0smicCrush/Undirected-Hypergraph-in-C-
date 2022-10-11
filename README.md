@@ -1,4 +1,4 @@
-# Undirected-Hypergraph-in-C-
+# Undirected-Hypergraph-in-C++
 This is an attempt at making a hypergraph in C++ with public methods to add vertices, add edges, remove vertices, remove edges, and some more in developement.
 I have designed this implementation to have a focus on accessing edges, hence that is the section with the lowest time complexity.
 
